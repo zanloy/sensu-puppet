@@ -106,6 +106,7 @@ define define_plugins_dir ($path = $name) {
       owner => 'sensu',
       group => 'sensu',
       require => Package['sensu'],
+      before => Service['sensu-client'],
     }
   }
 }
